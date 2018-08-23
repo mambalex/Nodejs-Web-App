@@ -20,8 +20,10 @@ var commentRoutes     = require("./routes/comments"),
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
 
+// var url = process.env.databaseURL || "mongodb://localhost/YelpCamp" ;
 // mongoose.connect("mongodb://localhost/YelpCamp");
-mongoose.connect("mongodb://alex:alex@ds125555.mlab.com:25555/yelpcampgrounds");
+// mongoose.connect("mongodb://alex:alex@ds125555.mlab.com:25555/yelpcampgrounds");
+mongoose.connect("mongodb://localhost/YelpCamp");
 
 app.set("view engine","ejs");
 app.use(flash());
@@ -51,7 +53,11 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 
-
-app.listen(process.env.PORT, process.env.IP,function(){
-    console.log("Server has started!!");   
+app.listen(3003, process.env.IP,function(){
+    console.log("Server has started!!");
+    console.log(process.env);
 });
+// app.listen(process.env.Port || 3000, process.env.IP,function(){
+//     console.log("Server has started!!");
+//     console.log(process.env);
+// });
