@@ -1,6 +1,6 @@
 # YelpCamp
 
-JavaScript
-NodeJs
-MongoDB
+JavaScript|
+NodeJs|
+MongoDB|
 Express
