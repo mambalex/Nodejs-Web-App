@@ -1,6 +1,4 @@
-# YelpCamp
-
-JavaScript|
-NodeJs|
-MongoDB|
-Express
+## Tech Stack
++ JavaScript
++ Nodejs &  Express
++ MongoDB
